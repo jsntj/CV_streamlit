@@ -65,63 +65,23 @@ if page == "Home":
     st.write("- Tableau Desktop Specialist")
     st.write("- Microsoft Certified: Data Analyst Associate")
 
+
+# Import modular portfolio pages
+from portfolio_sales_dashboard import show_sales_dashboard
+from portfolio_customer_segmentation import show_customer_segmentation
+from portfolio_supply_chain_analysis import show_supply_chain_analysis
+
 # Portfolio: Sales Dashboard
 elif page == "Portfolio: Sales Dashboard":
-    st.title("Portfolio: Sales Dashboard")
-    st.header("Project Overview")
-    st.write("""
-    Developed an interactive sales dashboard for a retail client to monitor key performance indicators and sales trends.
-    """)
-    st.header("Objectives")
-    st.write("- Provide real-time insights into sales performance.")
-    st.write("- Enable regional managers to identify underperforming products.")
-    st.write("- Improve decision-making with drill-down capabilities.")
-    st.header("Tools Used")
-    st.write("- **Tableau**: For dashboard creation and visualization.")
-    st.write("- **SQL**: For data extraction and transformation.")
-    st.write("- **Python**: For data preprocessing.")
-    st.header("Outcomes")
-    st.write("- Reduced reporting time by 50%.")
-    st.write("- Increased sales in underperforming regions by 15% through targeted strategies.")
-    st.write("- Enhanced user adoption with intuitive interface design.")
+    show_sales_dashboard()
 
 # Portfolio: Customer Segmentation
 elif page == "Portfolio: Customer Segmentation":
-    st.title("Portfolio: Customer Segmentation")
-    st.header("Project Overview")
-    st.write("""
-    Conducted customer segmentation analysis for an e-commerce company to optimize marketing strategies.
-    """)
-    st.header("Objectives")
-    st.write("- Identify distinct customer groups based on purchasing behavior.")
-    st.write("- Tailor marketing campaigns to specific segments.")
-    st.header("Tools Used")
-    st.write("- **Python (Pandas, Scikit-learn)**: For clustering and data analysis.")
-    st.write("- **SQL**: For querying customer data.")
-    st.write("- **Power BI**: For visualizing segment characteristics.")
-    st.header("Outcomes")
-    st.write("- Improved campaign ROI by 25% through targeted marketing.")
-    st.write("- Identified 5 distinct customer segments, enabling personalized promotions.")
-    st.write("- Reduced customer churn by 10% with segment-specific retention strategies.")
+    show_customer_segmentation()
 
 # Portfolio: Supply Chain Analysis
 elif page == "Portfolio: Supply Chain Analysis":
-    st.title("Portfolio: Supply Chain Analysis")
-    st.header("Project Overview")
-    st.write("""
-    Analyzed supply chain data to optimize inventory management and reduce operational costs for a manufacturing firm.
-    """)
-    st.header("Objectives")
-    st.write("- Identify bottlenecks in the supply chain.")
-    st.write("- Optimize inventory levels to minimize stockouts and overstock.")
-    st.header("Tools Used")
-    st.write("- **SQL**: For data extraction and aggregation.")
-    st.write("- **Python (Pandas, NumPy)**: For statistical analysis.")
-    st.write("- **Tableau**: For visualizing supply chain KPIs.")
-    st.header("Outcomes")
-    st.write("- Reduced inventory holding costs by 20%.")
-    st.write("- Decreased stockouts by 30% through improved demand forecasting.")
-    st.write("- Streamlined supplier evaluation process, saving 15 hours per month.")
+    show_supply_chain_analysis()
 
 # Footer
 st.sidebar.markdown("---")
